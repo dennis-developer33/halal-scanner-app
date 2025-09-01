@@ -1,0 +1,57 @@
+[
+  {
+    "Name": "pork",
+    "Reason": "Pork is explicitly forbidden in Islam (Quran 2:173)",
+    "AlternativeNames": [ "bacon", "ham", "prosciutto", "pepperoni", "pancetta", "chorizo", "salami", "pork fat", "lard" ]
+  },
+  {
+    "Name": "alcohol",
+    "Reason": "Intoxicants are forbidden in Islam (Quran 5:90)",
+    "AlternativeNames": [ "ethanol", "ethyl alcohol", "wine", "beer", "rum", "vodka", "whiskey", "brandy", "sake" ]
+  },
+  {
+    "Name": "gelatin",
+    "Reason": "Usually derived from pork unless specified as halal/beef gelatin",
+    "AlternativeNames": [ "gelatine", "pork gelatin" ]
+  },
+  {
+    "Name": "lard",
+    "Reason": "Pig fat - forbidden as pork derivative",
+    "AlternativeNames": [ "pig fat", "pork fat", "rendered pork fat" ]
+  },
+  {
+    "Name": "mono and diglycerides",
+    "Reason": "May be derived from pork fat unless certified halal",
+    "AlternativeNames": [ "monoglycerides", "diglycerides", "e471" ]
+  },
+  {
+    "Name": "glycerin",
+    "Reason": "May be derived from pork fat unless specified as vegetable glycerin",
+    "AlternativeNames": [ "glycerine", "glycerol", "e422" ]
+  },
+  {
+    "Name": "l-cysteine",
+    "Reason": "Often derived from pig hair or human hair",
+    "AlternativeNames": [ "cysteine", "e920" ]
+  },
+  {
+    "Name": "carmine",
+    "Reason": "Made from crushed insects (cochineals)",
+    "AlternativeNames": [ "cochineal", "natural red 4", "e120", "crimson lake" ]
+  },
+  {
+    "Name": "vanilla extract",
+    "Reason": "Contains alcohol unless specified as alcohol-free",
+    "AlternativeNames": [ "vanilla flavoring" ]
+  },
+  {
+    "Name": "shortening",
+    "Reason": "May contain lard unless specified as vegetable shortening",
+    "AlternativeNames": [ "animal shortening" ]
+  },
+  {
+    "Name": "corn starch",
+    "Reason": "Test entery for checking",
+    "AlternativeNames": [ "corn", "starch" ]
+  }
+]

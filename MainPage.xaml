@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HalalScanner.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+
+            <!-- Header -->
+            <Label Text="🕌 Halal Food Scanner"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#2E7D32" />
+
+            <Label Text="Scan ingredient labels to check if food is halal"
+                   FontSize="16"
+                   HorizontalOptions="Center"
+                   TextColor="Gray" />
+
+            <!-- Buttons -->
+            <Button x:Name="CameraButton"
+                    Text="📸 Take Photo"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    FontSize="18"
+                    HeightRequest="60"
+                    Clicked="OnCameraButtonClicked" />
+
+            <Button x:Name="GalleryButton"
+                    Text="🖼️ Choose from Gallery"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    FontSize="18"
+                    HeightRequest="60"
+                    Clicked="OnGalleryButtonClicked" />
+
+            <!-- Manual Input -->
+            <Frame BackgroundColor="LightGray" Padding="10">
+                <VerticalStackLayout>
+                    <Label Text="Or type ingredients manually:"
+                           FontSize="16"
+                           FontAttributes="Bold" />
+
+                    <Editor x:Name="ManualInputEditor"
+                            Placeholder="Enter ingredients here..."
+                            HeightRequest="100"
+                            BackgroundColor="White" />
+
+                    <Button x:Name="CheckManualButton"
+                            Text="Check Ingredients"
+                            BackgroundColor="#FF9800"
+                            TextColor="White"
+                            Clicked="OnCheckManualButtonClicked" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Results -->
+            <Frame x:Name="ResultFrame"
+                   IsVisible="False"
+                   BorderColor="Gray"
+                   Padding="15">
+                <VerticalStackLayout>
+                    <Label x:Name="ResultSummary"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center" />
+
+                    <CollectionView x:Name="HaramIngredientsView">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Padding="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <Label Grid.Row="0" 
+                                           Text="{Binding Name}"
+                                           FontAttributes="Bold"
+                                           TextColor="Red" />
+
+                                    <Label Grid.Row="1" 
+                                           Text="{Binding Reason}"
+                                           FontSize="14"
+                                           TextColor="Gray" />
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Extracted Text Display -->
+            <Frame x:Name="ExtractedTextFrame"
+                   IsVisible="False"
+                   BorderColor="LightGray"
+                   Padding="10">
+                <VerticalStackLayout>
+                    <Label Text="Extracted Text:"
+                           FontAttributes="Bold" />
+                    <Label x:Name="ExtractedTextLabel"
+                           FontSize="12"
+                           TextColor="DarkGray" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Loading Indicator -->
+            <ActivityIndicator x:Name="LoadingIndicator"
+                               IsVisible="False"
+                               IsRunning="False"
+                               Color="#4CAF50" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

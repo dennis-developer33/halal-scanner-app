@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="MainTheme" parent="Theme.MaterialComponents.DayNight">
+		<item name="colorPrimary">#512BD4</item>
+		<item name="colorPrimaryVariant">#2B0B98</item>
+		<item name="colorOnPrimary">@android:color/white</item>
+		<item name="colorSecondary">#DFD8F7</item>
+		<item name="colorSecondaryVariant">#9880e5</item>
+		<item name="colorOnSecondary">@android:color/black</item>
+		<item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+	</style>
+</resources>
